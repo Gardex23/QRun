@@ -7,9 +7,13 @@
     "icon": "./assets/images/icon.png",
     "scheme": "qrun",
     "userInterfaceStyle": "automatic",
+    "backgroundColor": "#000000",
     "newArchEnabled": true,
     "ios": {
       "supportsTablet": true
+    },
+    "splash": {
+      "backgroundColor": "#000000"
     },
     "android": {
       "adaptiveIcon": {

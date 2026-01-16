@@ -10,6 +10,7 @@ export const LightTheme = {
       borderRadius: 8
   }
 }
+
 export const DarkTheme = {
   text: "#efefef",
   background: "#101010",

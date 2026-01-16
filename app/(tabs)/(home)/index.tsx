@@ -1,5 +1,6 @@
 import { Body } from "@/components/Body";
 import { Card } from "@/components/Card";
+import { PerformanceDetails } from "@/components/PerformanceDetails";
 import { Title } from "@/components/Title";
 import { useFont } from "@shopify/react-native-skia";
 import { Activity, TrendingUp, Trophy, Users } from "lucide-react-native";
@@ -10,6 +11,7 @@ import { CartesianChart, Line } from "victory-native";
 import styled, { useTheme } from "styled-components/native";
 
 
+
 const DATA = Array.from({ length: 31 }, (_, i) => ({
   day: i,
   highTmp: 40 + 30 * Math.random(),
@@ -17,7 +19,7 @@ const DATA = Array.from({ length: 31 }, (_, i) => ({
 
 export default function HomeScreen() {
 
-  const interFont = useFont(require("../../assets/Inter.ttf"), 12);
+  const interFont = useFont(require("../../../assets/Inter.ttf"), 12);
 
   const theme = useTheme();
 
@@ -30,7 +32,7 @@ export default function HomeScreen() {
         <Card title={"Eficiencia Promedio"} data={5} icon={Activity} color={'rgb(79, 134, 253)'}/>
         <Card title={"Carreras Activas"} data={12} icon={Trophy} color={'rgb(255, 238, 0)'}/>
       </CardsContainer>
-      <ChartsContainer>
+      <CardsContainer>
         <Card title='Rendimiento por equipo' color={null} data={null} chart={<CartesianChart data={DATA} xKey="day" yKeys={["highTmp"]} axisOptions={{font: interFont, labelColor: theme.text, lineColor: theme.text}}>
           {({ points }) => (
             <Line points={points.highTmp} color={`${theme.buttons.background_blue}`} strokeWidth={3} />
@@ -41,19 +43,13 @@ export default function HomeScreen() {
             <Line points={points.highTmp} color={`${theme.buttons.background_blue}`} strokeWidth={3} />
           )}
         </CartesianChart>}/>
-      </ChartsContainer>
+      </CardsContainer>
+      <PerformanceDetails title="Detalles de rendimiento" />
     </Body>
   )
 }
 
 const CardsContainer = styled.View`
-  flex-direction: ${Platform.OS === 'web' ? 'row': 'column'};
-  width: 100%;
-  flex-wrap: no-wrap;
-  align-items: center;
-`
-
-const ChartsContainer = styled.View`
   flex-direction: ${Platform.OS === 'web' ? 'row': 'column'};
   width: 100%;
   flex-wrap: no-wrap;

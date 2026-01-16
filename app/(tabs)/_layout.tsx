@@ -14,17 +14,17 @@ export default function TabLayout() {
       backgroundColor: theme.background,
       elevation: 0
     }}}>
-      <Tabs.Screen name="index" options={{
+      <Tabs.Screen name="(home)" options={{
         title: "Home",
         tabBarIcon: ({focused}) => (<HomeIcon focused={focused}/>)
       }}/>
 
-      <Tabs.Screen name="run" options={{
+      <Tabs.Screen name="(run)" options={{
         title: "Run",
         tabBarIcon: ({focused}) => (<ZapIcon focused={focused}/>)
       }}/>
       
-      <Tabs.Screen name="explore" options={{
+      <Tabs.Screen name="(profile)" options={{
         title: "Profile",
         tabBarIcon: ({focused}) => (<UserIcon focused={focused}/>)
       }}/>

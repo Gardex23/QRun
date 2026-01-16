@@ -32,5 +32,5 @@ const BodyView = styled.SafeAreaView<{scrollable? : boolean}>`
   justify-content: ${(props) => props.scrollable ? 'flex-start' : 'center'};
   align-items: center;
   background-color: ${(props) => props.theme.background};
-  padding-top: ${Platform.OS === 'ios' ? '0px' : '50px'}
+  padding-top: ${Platform.OS === 'ios' ? '0px' : '50px'};
 `

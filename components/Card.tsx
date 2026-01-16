@@ -7,7 +7,7 @@ import styled from "styled-components/native";
 
 interface CardProps {
   title: string,
-  data: number | null,
+  data: number | string | null,
   icon?: LucideIcon,
   chart?: ReactNode,
   color: string | null,
@@ -43,14 +43,13 @@ const CardInfoContainer = styled.View`
 `
 
 const CardContainer = styled.View<{data :  number | null}>`
-  flex-direction: ${(props) => typeof (props.data) === 'number' ? 'row' : 'column' };
+  flex-direction: ${(props) => typeof (props.data) === 'object' ? 'column' : 'row' };
   align-items: center;
   width: 92%;
-  flex: 1;
   justify-content: space-between;
   border-radius: 8px;
   background-color: ${(props) => props.theme.buttons.background_grey};
-  padding: 8px;
+  padding: 15px;
   shadow-color: ${(props) => props.theme.text};
   shadow-offset: 0px 4px;
   shadow-opacity: 0.1;
