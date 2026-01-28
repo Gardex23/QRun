@@ -1,10 +1,10 @@
 import { Body } from "@/components/Body";
-import { Title } from "@/components/Title";
+import { ScreenSlider } from "@/components/FirstScreenSlider";
 
 export default function Screen1() {
   return (
     <Body>
-       <Title>Hola Mundo desde el boarding</Title>
+        <ScreenSlider />
     </Body>
   )
 }

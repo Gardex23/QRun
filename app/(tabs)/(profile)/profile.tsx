@@ -58,4 +58,5 @@ const CardsContainer = styled.View`
   flex-direction: ${Platform.OS === 'web' ? 'row': 'column'};
   flex-wrap: no-wrap;
   align-items: center;
+  width: 100%;
 `

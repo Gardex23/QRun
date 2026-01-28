@@ -3,7 +3,7 @@ export const LightTheme = {
     text: "#020202",
     buttons: {
       background_blue: "#0303c6",
-      background_grey: "#ededed",
+      background_grey: "#d9d9d9",
       color: "#121212",
       fontSize: 16,
       padding: 15,
@@ -17,7 +17,7 @@ export const DarkTheme = {
   buttons: {
     background_blue: "#0303c6",
     background_grey: "#2e2e2e",
-    color: "#ededed",
+    color: "#d9d9d9",
     fontSize: 16,
     padding: 15,
     borderRadius: 8
